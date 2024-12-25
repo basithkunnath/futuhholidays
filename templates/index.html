@@ -221,16 +221,16 @@
 
 <section class="container destinations-section text-center my-5">
   <h1 class="mb-5 fw-bold section-title" data-aos="fade-up">Our Destinations</h1>
-  <div class="row mt-4">
+  <div class="row gx-0 gy-0 mt-4">
     {% for destination in view_destinations %}
-    <!-- First Row of Images -->
-    <div class="col-12 col-md-4 mb-3 position-relative" data-aos="fade-up">
-      <img src="{{ destination.destination_image.url }}" class="destination-image" alt="Pyramids">
-      <h1 class="image-title">{{ destination.destination_name }}</h1>
+    <div class="col-12 col-md-4" data-aos="fade-up">
+      <img src="{{ destination.destination_image.url }}" class="destination-image w-100" alt="Pyramids">
+      <h1 class="image-title mt-2">{{ destination.destination_name }}</h1>
     </div>
     {% endfor %}
   </div>
 </section>
+
 
 
 {% include 'testimonial.html' %}
