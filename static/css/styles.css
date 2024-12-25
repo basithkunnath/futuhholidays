@@ -509,7 +509,7 @@ body {
   }
   
   .destination-image {
-    border-radius: 10px;
+    border-radius: 2px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
     width: 80%;
