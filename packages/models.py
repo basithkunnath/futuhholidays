@@ -6,6 +6,7 @@ from cloudinary.models import CloudinaryField
 
 class Packages(models.Model):
     image = CloudinaryField('image', default='default_image_placeholder')
+    sub_image_1 = CloudinaryField('image', default='default_image_placeholder')
     sub_image_2 = CloudinaryField('image', default='default_image_placeholder')
     title = models.CharField(max_length=100)
     short_description = models.TextField(null=True)
