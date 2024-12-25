@@ -432,6 +432,15 @@ body {
     color: var(--text-color);
     margin-top: 2rem;
   }
+
+  .modal-header {
+    background-color: var(--bg-color); /* Moroccan-themed color */
+    color: var(--text-color);
+  }
+  .modal-body {
+    font-size: 1.1rem;
+    color: var(--second-text-color);
+  }
   
   @media (max-width: 768px) {
     .banner-title {
