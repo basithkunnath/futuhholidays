@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<!-- Header Section -->
+<section class="header-section text-center py-5">
+    <h1 class="display-4">GALLERY</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}"><button class="btn btn-dark">Back to Home</button></a>
+        <a href="https://wa.me/919961102203"><button class="btn btn-outline">Book a Trip</button></a>
+    </div>
+</section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section container py-5">
+        <div class="row g-4">
+            {% for gallery in list_gallery_img %}
+            <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                <img src="{{ gallery.gallery_image.url }}" class="img-fluid rounded" alt="Gallery Image 1">
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section text-center py-5">
+        <h2 class="text-light mb-4">Pack Your Bags Now</h2>
+        <button class="btn btn-primary">Discover Place</button>
+    </section>
+
+
+
+{% endblock content %}

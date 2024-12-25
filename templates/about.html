@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+ <!-- Header Section -->
+ <section class="header-section text-center py-5">
+    <h1 class="display-4">ABOUT US</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}"><button class="btn btn-dark">Back to Home</button></a>
+        <a href="https://wa.me/919961102203"><button class="btn btn-outline">Book a Trip</button></a>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section class="about-us-page container mt-5">
+  
+  <!-- Main Content -->
+  <div class="row">
+    <!-- Left Column (Image of Ship) -->
+    <div class="col-lg-6 col-12 mb-4">
+      <img src="{{ view_aboutpage.about_page_image_1.url }}" alt="Ship Image" class="img-fluid" data-aos="fade-right">
+    </div>
+
+    <!-- Right Column (Text) -->
+    <div class="col-lg-6 col-12" data-aos="fade-left">
+      <h2 class="subheading">{{ view_aboutpage.about_page_title }}</h2>
+     <p>{{ view_aboutpage.about_page_first_paragraph }}</p>
+     <p>{{ view_aboutpage.about_page_second_paragraph }}</p>
+    </div>
+  </div>
+
+  <!-- Our Values Section -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h3 class="subheading" data-aos="fade-up">{{ view_aboutpage.our_values_title }}</h3>
+    </div>
+
+    <!-- Value Cards -->
+    <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in">
+      <h4 class="value-title">{{ view_aboutpage.our_values_sub_title_1 }}</h4>
+      <p>{{ view_aboutpage.our_values_content_1 }}</p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in" data-aos-delay="100">
+      <h4 class="value-title">{{ view_aboutpage.our_values_sub_title_2 }}</h4>
+      <p>{{ view_aboutpage.our_values_content_2 }}</p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-12" data-aos="zoom-in" data-aos-delay="200">
+      <h4 class="value-title">{{ view_aboutpage.our_values_sub_title_3 }}</h4>
+      <p>{{ view_aboutpage.our_values_content_3 }}</p>
+    </div>
+  </div>
+
+  <!-- Why Choose Us Section -->
+  <div class="row mt-5">
+    <div class="col-lg-6 col-12 mb-4" data-aos="fade-right">
+      <h3 class="subheading">{{ view_aboutpage.why_choose_us_title }}</h3>
+      <p>{{ view_aboutpage.why_choose_us_first_paragraph }}</p>
+      <p>{{ view_aboutpage.why_choose_us_second_paragraph }}</p>
+      <a href="https://wa.me/919947055743" class="btn btn-outline">Book a Trip</a>
+    </div>
+
+    <!-- Compass Image -->
+    <div class="col-lg-6 col-12">
+      <img src="{{ view_aboutpage.about_page_image_2.url }}" alt="Compass Image" class="img-fluid" data-aos="fade-left">
+    </div>
+  </div>
+</section>
+
+
+   {% include 'testimonial.html' %}
+  
+  
+
+{% endblock content %}

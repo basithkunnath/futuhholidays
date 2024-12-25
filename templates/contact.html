@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+<!-- Header Section -->
+<section class="header-section text-center py-5">
+    <h1 class="display-4">CONTACT US</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}"><button class="btn btn-dark">Back to Home</button></a>
+        <a href="https://wa.me/919961102203"><button class="btn btn-outline">Book a Trip</button></a>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-header" data-aos="fade-up">{{ view_contact.contact_title }}</h2>
+                <p class="contact-subheader" data-aos="fade-up" data-aos-delay="100">
+                    {{ view_contact.contact_sub_title }}
+                </p>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <form action="" name="contactForm" method="POST" onsubmit="return validateForm()">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3" data-aos="fade-up">
+                            <label for="name" class="form-label">Your Name *</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name"
+                                required>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100">
+                            <label for="email" class="form-label">Your Email *</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email"
+                                name="email" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
+                            <label for="phone" class="form-label">Your Phone *</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Enter your phone number"
+                                name="phone" required>
+                        </div>
+                        <div class="col-md-6 mb-3" data-aos="fade-up" data-aos-delay="300">
+                            <label for="subject" class="form-label">Your Subject *</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Enter the subject"
+                                required>
+                        </div>
+                    </div>
+                    <div class="mb-3" data-aos="fade-up" data-aos-delay="400">
+                        <label for="message" class="form-label">Write Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"
+                            name="message"></textarea>
+                    </div>
+                    <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                        <button type="submit" class="btn submit-button btn btn-outline ">Submit Now</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row contact-info">
+            <div class="col-12" data-aos="fade-up" data-aos-delay="600">
+                <p><i class="fas fa-map-marker-alt"></i><strong>Address:</strong> {{ view_contact.address }}</p>
+                <p><i class="fas fa-phone"></i><strong>Phone:</strong> <a href="">{{ view_contact.phone}}</a></p>
+                        
+                <p><i class="fas fa-location-arrow"></i><strong>Location:</strong> <a href="https://goo.gl/maps/example"
+                        target="_blank">{{ view_contact.location }}</a></p>
+            </div>
+        </div>
+</section>
+
+
+{% endblock content %}

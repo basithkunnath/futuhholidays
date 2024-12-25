@@ -1,0 +1,1169 @@
+/* General Styles */
+body {
+    font-family: "Luckiest Guy", cursive;
+    font-family: "Domine", serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    
+  }
+  
+  :root {
+    --bg-color: #8B4513;
+    --second-bg-color: #000000;
+    --text-color: #ffffff;
+    --second-text-color: #381f0c;
+}
+
+  .navbar-custom {
+    background-color: var(--bg-color);
+    padding: 15px;
+  }
+  
+  .nav-link {
+    margin-right: 15px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+  
+  }
+  
+  .button-book {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 5%;
+  }
+  
+  
+  
+  .navbar-toggler {
+    border: none;
+    outline: none;
+    
+  }
+  
+  /* Hamburger Icon Lines */
+  .toggler-icon {
+    display: block;
+    width: 27px;
+    height: 3.5px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: 0.4s;
+    border-radius: 2px;
+    
+  }
+  
+  /* Animation to "X" on open */
+  .navbar-toggler.collapsed .toggler-icon:nth-child(1) {
+    transform: rotate(0deg) translate(0, 0);
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:not(.collapsed) .toggler-icon:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:not(.collapsed) .toggler-icon:nth-child(2) {
+    opacity: 0;
+    border: none;
+    outline: none;
+  }
+  
+  .navbar-toggler:not(.collapsed) .toggler-icon:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    border: none;
+    outline: none;
+  }
+  
+  /* Remove outline on the navbar-toggler button */
+  .navbar-toggler:focus {
+    outline: none;
+    box-shadow: none; /* Removes any additional focus shadow */
+  }
+  
+  
+  .hero-section {
+    height: 86vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color);
+    position: relative;
+  }
+  
+  .hero-section h1,
+  .hero-section p {
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 1s ease-in, transform 1s ease-in;
+  }
+  
+  .hero-section h1 {
+    font-size: 4rem;
+    transform: translateY(-20px);
+    /* Slightly up */
+    font-family: "Luckiest Guy", cursive;
+  
+  }
+  
+  .hero-section p {
+    font-size: 1.5rem;
+    transform: translateY(20px);
+    /* Slightly down */
+    
+    font-weight: 250;
+  }
+  
+  /* Animation Active Class */
+  .carousel-item.active .animate-text {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Reset position */
+  }
+  
+  .carousel-item.active h1 {
+    animation: slideDown 1s ease-out;
+  }
+  
+  .carousel-item.active p {
+    animation: slideUp 1s ease-out;
+  }
+  
+  /* Keyframes for Animations */
+  @keyframes slideDown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes moveUpDown {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .animated {
+    animation: moveUpDown 2s infinite ease-in-out;
+  }
+  
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+  
+    .nav-link {
+      margin-left: 18px;
+    }
+  
+    .hero-section {
+      height: 43vh;
+    }
+  
+  
+    .hero-section h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero-section p {
+      font-size: 1rem;
+    }
+  
+    .button-book {
+      width: 100px;
+      padding: 5px;
+    }
+  
+  
+  }
+  
+  
+  
+  
+  /* Hero Section */
+  
+  /* Hero Title */
+  .fit-title {
+    font-weight: bold;
+    color: var(--second-text-color);
+  }
+  
+  /* Hero Description */
+  .fit-description {
+    font-size: 18px;
+    color: var(--second-text-color);
+  }
+  
+  /* Logos Section */
+  .fit-logo-section {
+    margin-bottom: 10px;
+  }
+  
+  .fit-logo-col {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fit-logo {
+    width: 80%;
+    height: auto;
+    
+  }
+  
+  /* Button Styling */
+  .fit-read-more-btn {
+    border-color: var(--second-text-color);
+    color: var(--second-text-color);
+  }
+  
+  .fit-read-more-btn:hover {
+    background-color: var(--second-text-color);
+    color: var(--text-color);
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  .section-title {
+    color: var(--second-text-color);
+    
+  }
+  
+  .why-travel-section .travel-card {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .why-travel-section .travel-card h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-text-color);
+    
+  }
+  
+  .why-travel-section .icon {
+    font-size: 3rem;
+    color :var(--second-text-color) ;
+  }
+  
+  @media (max-width: 767px) {
+    .section-title {
+      font-size: 1.5rem;
+    }
+  
+    .why-travel-section .travel-card h5 {
+      font-size: 0.875rem;
+    }
+  
+    .why-travel-section .icon {
+      font-size: 2rem;
+    }
+  }
+  
+  
+  .upcoming-section {
+    padding: 0px 20px;
+  }
+  
+  .trip-card img {
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  /* Animation when hovering or touching the image */
+  
+  /* Zoom effect for the trip image */
+  .trip-image-container {
+    overflow: hidden; /* Ensures the image does not overflow outside the container */
+  }
+  
+  .trip-image {
+    transition: transform 0.3s ease; /* Smooth transition for zoom */
+    
+  }
+  
+  .trip-image-container:hover .trip-image,
+  .trip-image-container:active .trip-image {
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+  
+  
+  .trip-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-color);
+  }
+  
+  .trip-card h5 {
+    color: var(--text-color);
+  }
+  
+  .trip-card p {
+    color: var(--text-color);
+  }
+  
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+  
+    
+  }
+  
+  .explore-button {
+    background-color: var(--text-color);
+    color: var(--second-text-color);
+  }
+  
+  .explore-button:hover {
+    color: var(--text-color);
+  }
+  
+  .trip-container {
+    margin-top: 50px;
+    
+  }
+  
+  
+  /* Banner Section Styles */
+  
+  /* Banner Styles */
+  
+  
+  .umrah-banner {
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px;
+    margin-top: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+    max-width: 100%;
+    position: relative;
+  }
+  
+  .umrah-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    
+    z-index: 1;
+  }
+  
+  .content, .banner-footer {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .banner-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .banner-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+  
+  .btn-primary {
+    background-color: var(--second-text-color);
+    border: none;
+  }
+  
+  .btn-secondary {
+    background-color: var(--second-text-color);
+    color: var(--text-color);
+    border: none;
+  }
+  
+  .btn-secondary:hover{
+    background-color: var(--text-color);
+    color: var(--second-text-color);
+  }
+  
+  .banner-footer {
+    font-size: 0.875rem;
+    color: var(--text-color);
+    margin-top: 2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .banner-title {
+        font-size: 2rem;
+    }
+    .banner-description {
+        font-size: 0.875rem;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .about-us-section {
+    padding: 0px 20px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--second-text-color);
+    /* Same as the image's font color */
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: var(--second-text-color);
+    max-width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .compass-img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .btn-outline {
+    color: var(--second-text-color);
+    border-color: var(--second-text-color);
+  }
+  
+  .btn-outline:hover {
+    background-color: var(--second-text-color);
+    color: var(--text-color);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .compass-img {
+      max-width: 100%;
+      margin-bottom: 2rem;
+    }
+  
+    .section-description {
+      font-size: 1rem;
+    }
+  }
+  
+  
+  .destinations-section {
+    padding: 0px 30px;
+  }
+  
+  .section-title {
+    color: var(--second-text-color);
+    /* Dark brown color */
+    font-size: 3rem;
+  }
+  
+  .destination-image {
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    max-height: 90%;
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  .image-title {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 0 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-transform: capitalize;
+    z-index: 10;
+  }
+  
+  .destination-image:hover {
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .image-title {
+      font-size: 1.2rem;
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  .testimonial-section {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .testimonial-header {
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--bg-color);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .testimonial-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+  }
+  
+  .testimonial-card .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  .testimonial-card .card-text {
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  
+  
+  
+  
+  
+  
+  /*About Page */
+  
+  .about-us-page {
+    padding: 0px 30px;
+  }
+  
+  .about-us-page p {
+    font-size: 1.1rem;
+    color: var(--second-text-color);
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--second-text-color);
+    /* Deep brownish color for title */
+  }
+  
+  .subheading {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--second-text-color);
+    /* Another brownish color for subheadings */
+  }
+  
+  .value-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color :var(--second-text-color) ;
+  }
+  
+  
+  
+  .btn-hover {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .btn-hover:hover {
+    background-color: var(--bg-color);
+    transform: translateY(-5px);
+  }
+  
+  /* Images styling */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 767px) {
+    .section-title {
+      font-size: 2rem;
+    }
+  
+    .subheading {
+      font-size: 1.5rem;
+    }
+  
+    .value-title {
+      font-size: 1.3rem;
+    }
+  }
+  
+  
+  /*Packages Page */
+  
+  /* General Styles */
+  
+  
+  .packages-section {
+    background-color: var(--text-color);
+    padding: 0px 25px;
+  }
+  
+  .packages-section h5 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    
+  }
+  
+  
+  /* Card Customization */
+  .card {
+    border: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--bg-color);
+    
+  }
+  
+  .package-card {
+    margin-bottom: 40px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: var(--text-color);
+  }
+  
+  .card-text {
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  /* Button Styling */
+  .btn {
+    margin-right: 10px;
+  }
+  
+  .btn-primary {
+    background-color: var(--text-color);
+    border-color: var(--text-color);
+    transition: background-color 0.3s ease-in-out;
+    color: var(--second-text-color);
+    
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--second-text-color);
+    color: var(--text-color);
+    border-color: var(--text-color);
+  }
+  
+  .btn-outline-primary {
+    color: var(--text-color);
+    border-color: var(--text-color);
+    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: var(--text-color);
+    color: var(--second-text-color);
+    border-color: var(--second-text-color);
+  }
+  
+  /* AOS Customization */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+  
+  [data-aos].aos-animate {
+    opacity: 1;
+  }
+  
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 2rem;
+    }
+  
+    .card-img-top {
+      height: 200px;
+    }
+  }
+  
+  
+  /* Gallery Page */
+  
+  
+  .header-section {
+    background: linear-gradient(to bottom, #8B4513, #ffffff);
+  }
+  
+  .header-section h1 {
+    color: var(--second-text-color);
+  }
+  
+  .btn-dark {
+    background-color: var(--second-bg-color);
+    border-color: var(--second-text-color);
+    
+  }
+  
+  .btn-dark:hover {
+      background: none;
+      border-color: var(--second-text-color);
+      color: var(--second-text-color);
+      
+  }
+  
+  .gallery-section {
+    padding: 0px 25px;
+  }
+  
+  .gallery-section img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .cta-section {
+    background-image: url('turkey.jpg');
+    background-size: cover;
+    background-position: center;
+    color:var(--text-color) ;
+  }
+  
+  @media (max-width: 768px) {
+    .header-section h1 {
+        font-size: 2rem;
+    }
+  
+    .gallery-section img {
+        height: auto;
+    }
+  }
+  
+  
+  /* Details Page */
+  
+ 
+  
+  .gallery-image {
+    border-radius: 3px;
+    overflow: hidden;
+    
+  }
+  .explore-section h2 {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 45px;
+    color: var(--second-text-color);
+  }
+  .explore-section p {
+    font-size: 20px;
+    line-height: 1.7;
+    color: var(--second-text-color);
+  }
+  .booking-form {
+    background: linear-gradient(to bottom right, #8B4513, #000000);
+    padding: 60px;
+    border-radius: 10px;
+    color: var(--text-color);
+    
+  }
+  .booking-form h3 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  .booking-form .form-label {
+    color: var(--text-color);
+    font-size: 15px;
+  }
+  
+  .btn-success {
+    background-color: var(--second-text-color);
+    border-color: var(--text-color);
+  }
+  
+  .btn-success:hover{
+    background-color: var(--text-color);
+    border: var(--second-text-color);
+    color: var(--second-text-color);
+  }
+  
+  .accordion-button::after {
+    font-size: 1rem;
+    
+  }
+  
+  .feature-list h3 {
+    font-size: 40px;
+    color: var(--second-text-color);
+  }
+  
+  .feature-list {
+    margin-top: 20px;
+  }
+  .feature-list ul {
+    padding-left: 15px;
+    color: var(--second-text-color);
+  }
+  .feature-list ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-size: 20px;
+  }
+  
+  .itinerary-section {
+    padding-bottom: 80px;
+    padding: 60px;
+    padding-top: 0%;
+    color: var(--second-text-color);
+    margin: 50px;
+  }
+  
+  .itinerary-section h3 {
+    font-size: 40px;
+    color: var(--second-text-color);
+  }
+  
+  .accordion-button {
+    color: var(--second-text-color);
+  }
+  
+  .accordion-item {
+    color: var(--second-text-color);
+  }
+  
+  @media (max-width: 768px) {
+    .itinerary-section {
+      padding: 10px;
+    }
+    .booking-form {
+      padding: 20px;
+  
+    }
+    
+  }
+  
+  
+  
+   /* Contact Us Page */
+  
+  
+   .contact-section {
+    background-color: var(--text-color);
+    padding: 50px 20px;
+    
+    
+  }
+
+  .form-label {
+    font-size: 16px;
+  }
+  
+  .contact-section form input,form textarea {
+    border-color: var(--second-text-color);
+  }
+  
+  .contact-header {
+    font-size: 2.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--second-text-color);
+  }
+  .contact-subheader {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--second-text-color);
+  }
+  .whatsapp-icon {
+    position: fixed;
+    right: 10px;
+    background-color: #25D366;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10%;
+    font-size: 34px;
+    z-index: 1000;
+    bottom: 10px;     /* Adjusts the distance from the bottom edge */
+  
+  }
+  .submit-button {
+    background-color: var(--bg-color);
+    border: solid var(--second-text-color);
+    color: var(--text-color);
+    border: none;
+  }
+  .contact-info {
+    text-align: center;
+    margin-top: 30px;
+    color: var(--text-color);
+  }
+  .contact-info p {
+    margin: 0;
+  }
+  
+  
+  .form-label {
+    color: var(--second-text-color);
+  }
+  .form-control {
+    border-color: var(--second-text-color);
+  }
+  
+  /* Custom CSS for Address, Location, and Contact Number */
+  .contact-info {
+  text-align: center;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: var(--bg-color);
+  border-radius: 8px;
+  color: var(--text-color);
+  }
+  
+  .contact-info h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  }
+  
+  .contact-info p, .contact-info a {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin: 5px 0;
+  }
+  
+  .contact-info a {
+  color: var(--text-color);
+  text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+  color: var(--text-color);
+  text-decoration: underline;
+  }
+  
+  .contact-info i {
+  color: var(--text-color);
+  margin-right: 10px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Custom Styles for Umrah Package Page */
+  
+  /* Header Section */
+  .umrah-header-section {
+    color: var(--text-color);
+  }
+  
+  .header-title {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    margin: 0%;
+    color: var(--second-text-color);
+  }
+  
+  .header-subtitle {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--second-text-color);
+  }
+  
+  .umrah-package-description {
+    margin-bottom: 1px;
+  }
+  
+  
+  /* Package Details Section */
+  .package-title,
+  .package-highlights-title,
+  .itinerary-title,
+  .contact-title {
+    color: var(--second-text-color);
+  }
+  
+  .package-description {
+    color: se;
+    font-size: 1.2rem;
+  }
+  
+  .package-details-card .details-card-title {
+    font-size: 1.8rem;
+    color: var(--text-color);
+  }
+  
+  .package-details-card {
+    background: linear-gradient(to bottom right, #8B4513, #000000);
+  }
+  
+  .package-details-card p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  .package-highlights-list {
+    list-style: disc inside;
+    color: var(--second-text-color);
+    font-size: 1.2rem;
+  
+  }
+  
+  
+  .full-width-image-container img {
+      width: 1200px; /* Fixed width on larger screens */
+      max-width: 100%; /* Ensures it scales down on smaller screens */
+      height: 400px; /* Fixed height */
+      object-fit: cover; /* Maintains aspect ratio without distortion */
+      margin: 0 auto; /* Center the image on larger screens */
+      display: block; /* Required for centering with margin */
+  }
+  
+  
+  /* Footer */
+  
+  
+  .footer {
+    background-color: var(--bg-color);
+    padding-top: 80px;
+    color: var(--text-color);
+    justify-content: center;
+    
+  }
+  
+  .footer-container {
+    padding-left: 100px;
+  }
+  
+  .footer .footer-logo img {
+    max-width: 180px;
+    margin-bottom: 20px;
+  }
+  
+  .footer h6 {
+    font-weight: bold;
+    color: var(--text-color);
+    font-size: 1.2rem;
+  }
+  
+  .footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer .social-icons i {
+    font-size: 18px;
+    margin-right: 15px;
+    color: var(--text-color);
+    margin-bottom: 30px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--text-color);
+    margin-top: 30px;
+  
+  }
+  
+  
+  @media (max-width: 768px) {
+    .footer-container {
+      padding-left: 0;
+    }
+  
+  }
+  
+  
+  
+  

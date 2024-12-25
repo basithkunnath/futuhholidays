@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+<!-- Header Section -->
+<section class="header-section text-center py-5">
+    <h1 class="display-4">PACKAGES DETAILS</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}"><button class="btn btn-dark">Back to Home</button></a>
+        <a href="https://wa.me/919961102203"><button class="btn btn-outline">Book a Trip</button></a>
+    </div>
+</section>
+
+
+<section class="deatails-section">
+
+    <!-- Image Gallery Section -->
+    <div class="container my-4" data-aos="fade-up">
+        <div class="row g-3">
+            <div class="col-md-6 gallery-image">
+                <img src="{{ details.sub_image_1.url }}" class="img-fluid" alt="Malaysia Tour">
+            </div>
+            <div class="col-md-6 gallery-image">
+                <img src="{{ details.sub_image_2.url }}" class="img-fluid" alt="Malaysia Culture">
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="container">
+        <div class="row">
+            <!-- Left Column -->
+            <div class="col-lg-8">
+                <!-- Explore Section -->
+                <div class="explore-section" data-aos="fade-right">
+                    <h2>Explore {{ details.country }}</h2>
+                    <p><span class="text-success">&#9679;</span> {{ details.duration }}</p>
+                    <p>{{ details.details_description }}</p>
+                </div>
+
+                <!-- Features Section -->
+                <div class="feature-list mt-4" data-aos="fade-right">
+                    <h3>Features</h3>
+                    <ul>
+                        {% for feature in details.features %}
+                        <li>{{ feature }}</li>
+                        {% empty %}
+                        <li>No features listed</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Booking Form -->
+            <div class="col-lg-4 booking-form" data-aos="fade-left">
+                <h3>Book Your Tour</h3>
+                <form action="" name="contactForm" method="POST" onsubmit="return validateForm()" >
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Write Your Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success w-100">Submit Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Itinerary Section -->
+    <div class="itinerary-section mt-2" data-aos="fade-right">
+        <h3>Itinerary</h3>
+        <div class="accordion" id="itineraryAccordion">
+            {% for item in itinerary_items %}
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="day{{ item.day_number }}">
+                    <button class="accordion-button {% if not forloop.first %}collapsed{% endif %}" type="button"
+                        data-bs-toggle="collapse" data-bs-target="#collapseDay{{ item.day_number }}"
+                        aria-expanded="{{ forloop.first|yesno:'true,false' }}">
+                        Day {{ item.day_number }} : {{ item.title }}
+                    </button>
+                </h2>
+                <div id="collapseDay{{ item.day_number }}"
+                    class="accordion-collapse collapse {% if forloop.first %}show{% endif %}">
+                    <div class="accordion-body">{{ item.description }}</div>
+                </div>
+            </div>
+            {% empty %}
+            <p>No itinerary available for this package.</p>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    {% endblock content %}

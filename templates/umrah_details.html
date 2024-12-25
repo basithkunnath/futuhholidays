@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+
+
+  <!-- Header Section -->
+  <section class="header-section text-center py-5">
+    <h1 class="display-4">UMRAH PACKAGE</h1>
+    <div class="d-flex justify-content-center gap-3 mt-4">
+        <a href="{% url 'home' %}"><button class="btn btn-dark">Back to Home</button></a>
+        <a href="https://wa.me/919961102203"><button class="btn btn-outline">Book a Trip</button></a>
+    </div>
+</section>
+
+
+<!-- Full-Width Hero Image -->
+<div class="full-width-image-container">
+  <img src="{% static '/images/futuhlogo.png' %}" alt="Umrah Package Hero Image" class="img-fluid w-100">
+</div>
+
+ 
+
+  <!-- Package Description Section -->
+  <section class="umrah-package-description py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8" data-aos="fade-right">
+          <h2 class="package-title mb-4">Package Overview</h2>
+          <p class="package-description">Experience the spiritual journey of Umrah with our specially designed package that includes all the necessary services to make your trip comfortable and hassle-free.</p>
+          <h3 class="package-highlights-title my-4">Highlights</h3>
+          <ul class="package-highlights-list">
+            <li>5-star accommodation close to Haram</li>
+            <li>Guided tours of Mecca and Medina</li>
+            <li>Daily meals included</li>
+            <li>Air-conditioned transport</li>
+            <li>Expert guides for religious practices</li>
+          </ul>
+        </div>
+        <div class="col-lg-4" data-aos="fade-left">
+          <div class="package-details-card p-4 rounded">
+            <h4 class="details-card-title ">Package Details</h4>
+            <p><strong>Duration:</strong> 7 days, 6 nights</p>
+            <p><strong>Departure:</strong> March 2024</p>
+            <p><strong>Price:</strong> $1,500 per person</p>
+            <button class="btn btn-success w-100 mt-3">Book Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+{% endblock content %}
