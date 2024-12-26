@@ -243,6 +243,11 @@ body {
   /* Hero Section */
   
   /* Hero Title */
+
+  .fit-hero-section {
+    padding: 0px 30px;
+  }
+
   .fit-title {
     font-weight: bold;
     color: var(--second-text-color);
@@ -294,6 +299,10 @@ body {
     color: var(--second-text-color);
     
   }
+
+  .why-travel-section {
+    padding: 0px 30px;
+  }
   
   .why-travel-section .travel-card {
     text-align: center;
@@ -312,7 +321,7 @@ body {
     color :var(--second-text-color) ;
   }
   
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .section-title {
       font-size: 1.5rem;
     }
@@ -328,7 +337,7 @@ body {
   
   
   .upcoming-section {
-    padding: 0px 20px;
+    padding: 0px 30px;
   }
   
   .trip-card img {
