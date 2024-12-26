@@ -19,7 +19,7 @@ body {
 
 #popupModal .modal-dialog {
   max-width: 90%; /* Adjust width for smaller screens */
-  margin-right: 400px;
+  margin-left: 400px;
 }
 #popupModal .modal-content {
   background-size: cover;
