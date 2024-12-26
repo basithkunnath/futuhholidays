@@ -17,16 +17,21 @@ body {
 }
 
 
- /* Custom Popup Styles */
- #popupModal .modal-content {
-  background-image: url('');
+#popupModal .modal-dialog {
+  max-width: 90%; /* Adjust width for smaller screens */
+}
+#popupModal .modal-content {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
   border: none;
-  height: 500px;
+  height: 70vh; /* Adjust for responsive height */
+  max-height: 500px; /* Set max height for larger screens */
   color: white;
-  position: relative; /* Enable absolute positioning for footer content */
+  position: relative;
+}
+#popupModal .modal-header {
+  border: none;
 }
 #popupModal .modal-footer {
   position: absolute;
@@ -34,10 +39,12 @@ body {
   right: 20px;
   border: none;
 }
-#popupModal .modal-header {
-  border: none;
+@media (max-width: 576px) {
+  #popupModal .modal-content {
+      height: 50vh; /* Reduce height for very small screens */
+      max-height: 300px;
+  }
 }
-
 
   .navbar-custom {
     background-color: var(--bg-color);

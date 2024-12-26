@@ -113,12 +113,14 @@
   <script>
     AOS.init();  // Initialize AOS
     document.addEventListener('DOMContentLoaded', function () {
-            // Show the popup modal when the page loads
-            let popupModal = new bootstrap.Modal(document.getElementById('popupModal'), {
-                backdrop: 'static', // Disable closing by clicking outside
-                keyboard: false    // Disable closing with the Escape key
-            });
-            popupModal.show();
+            // Wait for 5 seconds (5000 milliseconds) before showing the modal
+            setTimeout(function () {
+                let popupModal = new bootstrap.Modal(document.getElementById('popupModal'), {
+                    backdrop: 'static', // Prevent closing by clicking outside
+                    keyboard: false    // Disable closing with the Escape key
+                });
+                popupModal.show();
+            }, 5000); // 5 seconds delay
         });
   </script>
 </body>
