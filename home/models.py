@@ -2,6 +2,14 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 # Create your models here.
 
+
+class PopupImage(models.Model):
+    image = CloudinaryField('image', default='default_image_placeholder')
+
+    def __str__(self):
+        return self.image.name
+
+
 class Carsousel(models.Model):
     country_name = models.CharField(max_length=100)
     sub_destinations = models.CharField(max_length=100)

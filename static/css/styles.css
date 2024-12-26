@@ -16,6 +16,29 @@ body {
     --second-text-color: #381f0c;
 }
 
+
+ /* Custom Popup Styles */
+ #popupModal .modal-content {
+  background-image: url('');
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  border: none;
+  height: 500px;
+  color: white;
+  position: relative; /* Enable absolute positioning for footer content */
+}
+#popupModal .modal-footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border: none;
+}
+#popupModal .modal-header {
+  border: none;
+}
+
+
   .navbar-custom {
     background-color: var(--bg-color);
     padding: 15px;
@@ -433,14 +456,7 @@ body {
     margin-top: 2rem;
   }
 
-  .modal-header {
-    background-color: var(--bg-color); /* Moroccan-themed color */
-    color: var(--text-color);
-  }
-  .modal-body {
-    font-size: 1.1rem;
-    color: var(--second-text-color);
-  }
+
   
   @media (max-width: 768px) {
     .banner-title {

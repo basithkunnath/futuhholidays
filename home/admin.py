@@ -6,6 +6,7 @@ from . models import UpcomingTrips
 from . models import UmrahPackage
 from . models import AboutSection
 from . models import Destinations
+from .models import PopupImage
 
 
 # Register your models here.
@@ -18,3 +19,6 @@ admin.site.register(AboutSection)
 admin.site.register(Destinations)
 
 
+@admin.register(PopupImage)
+class PopupImageAdmin(admin.ModelAdmin):
+    list_display = ('id', 'image')

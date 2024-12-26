@@ -11,6 +11,7 @@ from .models import UpcomingTrips
 from .models import UmrahPackage
 from .models import AboutSection
 from .models import Destinations
+from .models import PopupImage
 from about . models import Testimonial
 
 
@@ -23,6 +24,7 @@ def carsousel_view(request):
     view_about_section = AboutSection.objects.first()
     view_destinations = Destinations.objects.all()
     view_testimonial = Testimonial.objects.all()
+    popup_image = PopupImage.objects.last()  # Fetch the most recent image
     context = {
         'view_carsousel': view_carsousel,
         'view_introduction':view_introduction,
@@ -31,6 +33,8 @@ def carsousel_view(request):
         'display_umrah_banner':display_umrah_banner,
         'view_about_section':view_about_section,
         'view_destinations' :view_destinations,
-        'view_testimonial': view_testimonial
+        'view_testimonial': view_testimonial,
+        'popup_image': popup_image
+        
     }
     return render(request, 'index.html', context)
