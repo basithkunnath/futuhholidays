@@ -102,10 +102,10 @@
     <!-- Logo Section -->
 
     <div class="row justify-content-center fit-logo-section">
-      <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
+      <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-right" >
         <img src="{{ view_introduction.logo_image_1.url }}" alt="Logo 1" class="img-fluid fit-logo">
       </div>
-      <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-in" data-aos-duration="1000">
+      <div class="col-3 col-md-2 fit-logo-col" data-aos="fade-right" >
         <img src="{{ view_introduction.logo_image_2.url }}" alt="Logo 2" class="img-fluid fit-logo">
       </div>
     </div>
@@ -114,29 +114,28 @@
     <h1 class="fit-title mt-4">{{ view_introduction.welcome_title }}</h1>
 
     <!-- Description -->
-    <p class="fit-description mt-3 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+    <p class="fit-description mt-3 mb-4" data-aos="fade-right">
       {{ view_introduction.welcome_paragraph }}
     </p>
 
     <!-- Button -->
-    <a href="{% url 'about' %}" class="btn btn-outline-dark fit-read-more-btn" data-aos="fade-up" data-aos-duration="1000"
-      data-aos-delay="600">Read More</a>
+    <a href="{% url 'about' %}" class="btn btn-outline-dark fit-read-more-btn" data-aos="fade-right" >Read More</a>
   </div>
 </section>
 
 
 <section class="why-travel-section py-5 text-center">
   <div class="container">
-    <h1 class="mb-5 fw-bold section-title" data-aos="fade-up">{{ view_whytravel.whytravel_title }}</h1>
+    <h1 class="mb-5 fw-bold section-title" data-aos="fade-right">{{ view_whytravel.whytravel_title }}</h1>
     <div class="row">
       <div class="col-md-3 col-6">
-        <div class="travel-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="travel-card" data-aos="fade-right">
           <i class="fas fa-kaaba icon"></i>
           <h5 class="mt-3">{{ view_whytravel.feature_one }}</h5>
         </div>
       </div>
       <div class="col-md-3 col-6">
-        <div class="travel-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="travel-card" data-aos="fade-up">
           <i class="fas fa-compass icon"></i>
           <h5 class="mt-3">{{ view_whytravel.feature_two }}</h5>
         </div>
