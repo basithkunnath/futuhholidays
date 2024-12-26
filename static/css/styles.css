@@ -25,6 +25,7 @@ body {
   background-position: center;
   border-radius: 15px;
   border: none;
+  width: 400px;
   height: 500px; /* Adjust for responsive height */
   color: white;
   position: relative;
