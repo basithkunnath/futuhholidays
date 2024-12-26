@@ -42,7 +42,7 @@ body {
 @media (max-width: 576px) {
   #popupModal .modal-content {
       height: 50vh; /* Reduce height for very small screens */
-      max-height: 300px;
+      max-height: 800px;
   }
 }
 
