@@ -180,7 +180,7 @@
         {{ display_umrah_banner.umrah_package_short_description }}
       </p>
       <div class="d-flex justify-content-center justify-content-lg-start button-group">
-        <a><button type="button" class="btn btn-primary custom-margin-right" data-bs-toggle="modal" data-bs-target="#promoModal" >View Details</button></a>
+        <a href="{% url 'umrah_details' %}" ><button class="btn btn-primary custom-margin-right">View Details</button></a>
         <a href="https://wa.me/919961102203"><button class="btn btn-secondary" >Book Now</button></a>
       </div>
     </div>
@@ -188,30 +188,7 @@
   <p class="banner-footer text-center text-lg-start">
     {{ display_umrah_banner.umrah_package_free_text }}
   </p>
-  <!-- Modal -->
-  <div class="modal fade" id="promoModal" tabindex="-1" aria-labelledby="promoModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="promoModalLabel">Exclusive Travel Deals to Morocco</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <p><strong>Plan Your Next Adventure to Morocco:</strong></p>
-                <ul>
-                    <li>🏜️ Desert Safari - Starting at $499</li>
-                    <li>🏰 Explore Marrakesh - 4 Days & 3 Nights Package</li>
-                    <li>🏖️ Beachfront Resorts - Up to 30% Off</li>
-                </ul>
-                <p>Don't miss out on our early bird discounts. <strong>Book by December 31st!</strong></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <a href="/book-now/" class="btn btn-primary">Book Now</a>
-            </div>
-        </div>
-    </div>
-</div>
+  
 </section>
 
 
