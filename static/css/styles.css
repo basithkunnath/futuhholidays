@@ -18,15 +18,14 @@ body {
 
 
 #popupModal .modal-dialog {
-  max-width: 90%; /* Adjust width for smaller screens */
-  margin-left: 400px;
+  max-width: 400px; /* Set width to 400px */
 }
+
 #popupModal .modal-content {
   background-size: cover;
   background-position: center;
   border-radius: 15px;
   border: none;
-  width: 400px;
   height: 500px; /* Adjust for responsive height */
   color: white;
   position: relative;
