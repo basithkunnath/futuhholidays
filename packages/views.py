@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from . models import Packages,ItineraryItem
+from . models import Packages,ItineraryItem,UmrahPackage_Details
 from django.shortcuts import get_object_or_404
 from django.core.mail import EmailMessage
 from django.conf import settings
@@ -58,3 +58,13 @@ def package_details(request,pk):
         except Exception as e:
             print("Failed to send email:", e)
     return render(request, 'package_details.html',context)
+
+
+
+
+
+
+def umrah_package_details(request):
+    """View to display a list of all Umrah packages."""
+    umrah_package_details = UmrahPackage_Details.objects.first()
+    return render(request, 'umrah_details.html', {'umrahdetails': umrah_package_details})
