@@ -25,8 +25,7 @@ body {
   background-position: center;
   border-radius: 15px;
   border: none;
-  height: 70vh; /* Adjust for responsive height */
-  max-height: 500px; /* Set max height for larger screens */
+  height: 500px; /* Adjust for responsive height */
   color: white;
   position: relative;
 }
