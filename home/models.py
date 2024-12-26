@@ -7,8 +7,7 @@ class PopupImage(models.Model):
     image = CloudinaryField('image', default='default_image_placeholder')
 
     def __str__(self):
-        return self.image.name
-
+        return str(self.pk)
 
 class Carsousel(models.Model):
     country_name = models.CharField(max_length=100)
