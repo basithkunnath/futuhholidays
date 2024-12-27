@@ -5,15 +5,15 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #f3f3f3;
+    background-color: #ffffff;
     
   }
   
   :root {
-    --bg-color: #ffffff;
-    --second-bg-color: #f3f3f3 ;
+    --bg-color: #8B4513;
+    --second-bg-color: #000000;
     --text-color: #ffffff;
-    --second-text-color: #000000;
+    --second-text-color: #381f0c;
 }
 
 
@@ -47,7 +47,7 @@ body {
 }
 
   .navbar-custom {
-    background-color: #f3f3f3;
+    background-color: var(--bg-color);
     padding: 15px;
   }
   
@@ -301,7 +301,7 @@ body {
   }
 
   .why-travel-section {
-    padding: 0px 30px;
+    p
   }
   
   .why-travel-section .travel-card {
