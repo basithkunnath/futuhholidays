@@ -5,14 +5,14 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background-color: #ffffff;
+    background-color: #f3f3f3;
     
   }
   
   :root {
-    --bg-color: #8B4513;
+    --bg-color: #ffffff;
     --second-bg-color: #000000;
-    --text-color: #ffffff;
+    --text-color: #000000;
     --second-text-color: #381f0c;
 }
 
