@@ -11,9 +11,9 @@ body {
   
   :root {
     --bg-color: #ffffff;
-    --second-bg-color: #000000;
-    --text-color: #000000;
-    --second-text-color: #381f0c;
+    --second-bg-color: #f3f3f3 ;
+    --text-color: #ffffff;
+    --second-text-color: #000000;
 }
 
 
@@ -47,7 +47,7 @@ body {
 }
 
   .navbar-custom {
-    background-color: var(--bg-color);
+    background-color: #f3f3f3;
     padding: 15px;
   }
   
