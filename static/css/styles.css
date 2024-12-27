@@ -290,22 +290,17 @@ body {
   
   
   
-  
-  
-  
-  
-  
   .section-title {
     color: var(--second-text-color);
     
   }
 
   .why-travel-section {
-    p
+    padding: 0px 30px;
   }
   
   .why-travel-section .travel-card {
-    text-align: center;
+    text-align: center ;
     padding: 20px;
   }
   
