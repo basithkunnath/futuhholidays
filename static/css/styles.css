@@ -13,7 +13,7 @@ body {
     --bg-color: #0d5344;
     --second-bg-color: #0d5344;
     --text-color: #ffffff;
-    --second-text-color: #b38228;
+    --second-text-color: #000000;
 }
 
 
@@ -47,13 +47,13 @@ body {
 }
 
   .navbar-custom {
-    background-color: var(--bg-color);
+    background-color: var(--text-color);
     padding: 15px;
   }
   
   .nav-link {
     margin-right: 15px;
-    color: var(--text-color);
+    color: var(--second-text-color);
     font-size: 1.1rem;
   
   }
@@ -277,12 +277,12 @@ body {
   
   /* Button Styling */
   .fit-read-more-btn {
-    border-color: var(--second-text-color);
-    color: var(--second-text-color);
+    border-color: var(--bg-color);
+    color: var(--second-bg-color);
   }
   
   .fit-read-more-btn:hover {
-    background-color: var(--second-text-color);
+    background-color: var(--second-bg-color);
     color: var(--text-color);
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
@@ -381,11 +381,14 @@ body {
   
   .explore-button {
     background-color: var(--text-color);
-    color: var(--second-text-color);
+    color: var(--second-bg-color);
   }
   
   .explore-button:hover {
     color: var(--text-color);
+    border-color: var(--text-color);
+    
+    
   }
   
   .trip-container {
