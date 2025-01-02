@@ -117,6 +117,14 @@ body {
   
   .carousel-inner {
     padding: 0px 20px 0px 20px;
+    box-sizing: border-box;
+  }
+
+  .carousel-item {
+    width: calc(100% - 40px);
+    margin: auto;
+    overflow: hidden;
+    border-radius: 10px;
   }
   
   .hero-section {
