@@ -115,6 +115,9 @@ body {
     box-shadow: none; /* Removes any additional focus shadow */
   }
   
+  .carousel-inner {
+    padding: 50px;
+  }
   
   .hero-section {
     height: 86vh;
@@ -125,6 +128,7 @@ body {
     align-items: center;
     color: var(--text-color);
     position: relative;
+    border-radius: 40px;
   }
   
   .hero-section h1,
