@@ -449,19 +449,19 @@ body {
   }
   
   .btn-primary {
-    background-color: var(--second-text-color);
+    background-color: var(--text-color);
     border: none;
   }
   
   .btn-secondary {
-    background-color: var(--second-text-color);
+    background-color: var(--second-bg-color);
     color: var(--text-color);
     border: none;
   }
   
   .btn-secondary:hover{
     background-color: var(--text-color);
-    color: var(--second-text-color);
+    color: var(--second-bg-color);
   }
   
   .banner-footer {
@@ -515,12 +515,12 @@ body {
   }
   
   .btn-outline {
-    color: var(--second-text-color);
-    border-color: var(--second-text-color);
+    color: var(--second-bg-color);
+    border-color: var(--second-bg-color);
   }
   
   .btn-outline:hover {
-    background-color: var(--second-text-color);
+    background-color: var(--second-bg-color);
     color: var(--text-color);
   }
   
@@ -767,12 +767,12 @@ body {
     background-color: var(--text-color);
     border-color: var(--text-color);
     transition: background-color 0.3s ease-in-out;
-    color: var(--second-text-color);
+    color: var(--second-bg-color);
     
   }
   
   .btn-primary:hover {
-    background-color: var(--second-text-color);
+    background-color: var(--second-bg-color);
     color: var(--text-color);
     border-color: var(--text-color);
   }
@@ -785,8 +785,8 @@ body {
   
   .btn-outline-primary:hover {
     background-color: var(--text-color);
-    color: var(--second-text-color);
-    border-color: var(--second-text-color);
+    color: var(--second-bg-color);
+    border-color: var(--second-bg-color);
   }
   
   /* AOS Customization */
@@ -814,7 +814,7 @@ body {
   
   
   .header-section {
-    background: linear-gradient(to bottom, #8B4513, #ffffff);
+    background: linear-gradient(to bottom, var(--second-bg-color), #ffffff);
   }
   
   .header-section h1 {
@@ -823,14 +823,14 @@ body {
   
   .btn-dark {
     background-color: var(--second-bg-color);
-    border-color: var(--second-text-color);
+    border-color: var(--second-bg-color);
     
   }
   
   .btn-dark:hover {
       background: none;
-      border-color: var(--second-text-color);
-      color: var(--second-text-color);
+      border-color: var(--second-bg-color);
+      color: var(--second-bg-color);
       
   }
   
@@ -882,7 +882,7 @@ body {
     color: var(--second-text-color);
   }
   .booking-form {
-    background: linear-gradient(to bottom right, #8B4513, #000000);
+    background: linear-gradient(to bottom right, var(--second-bg-color), #000000);
     padding: 60px;
     border-radius: 10px;
     color: var(--text-color);
@@ -899,14 +899,14 @@ body {
   }
   
   .btn-success {
-    background-color: var(--second-text-color);
+    background-color: var(--second-bg-color);
     border-color: var(--text-color);
   }
   
   .btn-success:hover{
     background-color: var(--text-color);
-    border: var(--second-text-color);
-    color: var(--second-text-color);
+    border: var(--second-bg-color);
+    color: var(--second-bg-color);
   }
   
   .accordion-button::after {
@@ -1010,7 +1010,7 @@ body {
   }
   .submit-button {
     background-color: var(--bg-color);
-    border: solid var(--second-text-color);
+    border: solid var(--second-bg-color);
     color: var(--text-color);
     border: none;
   }
