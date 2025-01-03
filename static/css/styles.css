@@ -57,6 +57,10 @@ body {
     font-size: 1.1rem;
   
   }
+
+  .nav-link:hover{
+    color: #ac7807;
+  }
   
   .button-book {
     background-color: var(--text-color);
@@ -116,7 +120,7 @@ body {
   }
   
   .carousel {
-    padding: 0px 10px 0px 10px;
+    padding: 0px 15px 0px 15px;
   }
 
   .carousel-inner {
