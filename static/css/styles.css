@@ -115,6 +115,10 @@ body {
     box-shadow: none; /* Removes any additional focus shadow */
   }
   
+  .carousel {
+    padding: 0px 20px 0px 20px;
+  }
+
   .carousel-inner {
     padding: 0px 20px 0px 20px;
   }
