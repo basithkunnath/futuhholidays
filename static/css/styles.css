@@ -65,7 +65,7 @@ body {
   .button-book {
     color: var(--bg-color);
     border-radius: 5px;
-    border: var(--bg-color);
+    border: solid var(--bg-color);
   }
   
   .button-book:hover {
