@@ -65,7 +65,7 @@ body {
   .button-book {
     color: var(--bg-color);
     border-radius: 5px;
-    border: solid var(--bg-color);
+    border: solid 1px var(--bg-color);
   }
   
   .button-book:hover {
@@ -245,7 +245,7 @@ body {
   
     .button-book {
       width: 100px;
-      padding: 5px;
+      padding: 7px;
     }
   
   
@@ -373,7 +373,7 @@ body {
   
   
   .trip-card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
     background-color: var(--bg-color);
   }
   
