@@ -58,17 +58,21 @@ body {
   
   }
 
-  .nav-link:hover{
+  .nav-link:hover {
     color: #ac7807;
   }
   
   .button-book {
-    background-color: var(--text-color);
     color: var(--bg-color);
-    border-radius: 5%;
+    border-radius: 5px;
+    border: var(--bg-color);
   }
   
-  
+  .button-book:hover {
+    background: var(--bg-color);
+    color: var(--text-color);
+
+  }
   
   .navbar-toggler {
     border: none;
@@ -81,7 +85,7 @@ body {
     display: block;
     width: 27px;
     height: 3.5px;
-    background-color: var(--text-color);
+    background-color: var(--bg-color);
     margin: 5px 0;
     transition: 0.4s;
     border-radius: 2px;
